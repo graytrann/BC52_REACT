@@ -8,8 +8,10 @@
 // import Shop from "./Ex_ShopLayout/Shop";
 // import ShoeShop from "./Ex_ShoeShop/ShoeShop";
 
-import State from "./7_State/State";
-import StateCar from "./Ex_StateCar/StateCar";
+import Shopping from "./Ex_Shopping/Shopping";
+
+// import State from "./7_State/State";
+// import StateCar from "./Ex_StateCar/StateCar";
 
 function App() {
   // Component: là một function return về cú pháp mô tả giao diện sẽ được hiển thị
@@ -28,13 +30,14 @@ function App() {
       {/* <ConditionalRendering /> */}
       {/* <RenderList /> */}
       {/* <Props /> */}
-      <State />
+      {/* <State /> */}
 
       {/* BÀI TẬP */}
       {/* <Shop /> */}
       {/* <ShoeShop /> */}
       {/* BÀI TẬP HOME */}
       {/* <StateCar /> */}
+      <Shopping />
     </div>
   );
 }
