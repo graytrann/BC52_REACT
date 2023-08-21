@@ -8,7 +8,10 @@
 // import Shop from "./Ex_ShopLayout/Shop";
 // import ShoeShop from "./Ex_ShoeShop/ShoeShop";
 
-import Shopping from "./Ex_Shopping/Shopping";
+import Form from "./8_Form/Form";
+import Effect from "./9_Effect/Effect";
+import UserManagerment from "./Ex_UserManagement/UserManagerment";
+// import Shopping from "./Ex_Shopping/Shopping";
 
 // import State from "./7_State/State";
 // import StateCar from "./Ex_StateCar/StateCar";
@@ -31,13 +34,16 @@ function App() {
       {/* <RenderList /> */}
       {/* <Props /> */}
       {/* <State /> */}
+      {/* <Form/> */}
+      {/* <Effect /> */}
 
       {/* BÀI TẬP */}
       {/* <Shop /> */}
       {/* <ShoeShop /> */}
       {/* BÀI TẬP HOME */}
       {/* <StateCar /> */}
-      <Shopping />
+      {/* <Shopping /> */}
+      <UserManagerment/>
     </div>
   );
 }

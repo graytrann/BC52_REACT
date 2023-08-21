@@ -6,7 +6,7 @@ export default function ProductList({ products, onGetProduct, onAddToCart }) {
     onGetProduct(product);
   };
 
-  const handleGetToCart = (product) => {};
+  // const handleGetToCart = (product) => {};
   return (
     <div className="row">
       {products.map((product) => {

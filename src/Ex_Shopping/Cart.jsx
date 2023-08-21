@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Cart({ onCloseCart, carts }) {
+export default function Cart({ onCloseCart, carts, onDeleteProductFromCart }) {
   return (
     <>
       <div style={{ display: "block" }} className="modal show" tabIndex={-1}>
@@ -47,7 +47,12 @@ export default function Cart({ onCloseCart, carts }) {
                         <td>{item.price}</td>
                         <td>{item.price * item.quantity}</td>
                         <td>
-                          <button className="btn btn-danger">X</button>
+                          <button
+                            onClick={() => onDeleteProductFromCart(item.id)}
+                            className="btn btn-danger"
+                          >
+                            X
+                          </button>
                         </td>
                       </tr>
                     );

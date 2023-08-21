@@ -50,6 +50,15 @@ export default function Shopping() {
     }
   };
 
+  const handleDeleteProductFromCart = (productID) => {
+    const newCarts = carts.filter((item) => item.id !== productID);
+    setCarts(newCarts);
+  };
+
+  const handleChangeQuantityFromCart = (productID, quantity) => {
+    // tự làm
+  };
+
   return (
     <div className="container">
       <h1 className="text-center text-primary">Phone Shop</h1>
@@ -68,7 +77,14 @@ export default function Shopping() {
 
       {/* <Cart isOpen={isOpen} /> */}
       {/* hoặc */}
-      {isOpen && <Cart carts={carts} onCloseCart={handleCloseCart} />}
+      {isOpen && (
+        <Cart
+          carts={carts}
+          onCloseCart={handleCloseCart}
+          onDeleteProductFromCart={handleDeleteProductFromCart}
+          onChangeQuantity={handleChangeQuantityFromCart}
+        />
+      )}
     </div>
   );
 }
