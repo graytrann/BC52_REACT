@@ -11,7 +11,7 @@
 import Form from "./8_Form/Form";
 import Effect from "./9_Effect/Effect";
 import UserManagerment from "./Ex_UserManagement/UserManagerment";
-// import Shopping from "./Ex_Shopping/Shopping";
+import Shopping from "./Ex_Shopping/Shopping";
 
 // import State from "./7_State/State";
 // import StateCar from "./Ex_StateCar/StateCar";
@@ -42,8 +42,8 @@ function App() {
       {/* <ShoeShop /> */}
       {/* BÀI TẬP HOME */}
       {/* <StateCar /> */}
-      {/* <Shopping /> */}
-      <UserManagerment/>
+      <Shopping />
+      {/* <UserManagerment/> */}
     </div>
   );
 }

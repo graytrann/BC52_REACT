@@ -55,8 +55,18 @@ export default function Shopping() {
     setCarts(newCarts);
   };
 
-  const handleChangeQuantityFromCart = (productID, quantity) => {
-    // tự làm
+  const handleChangeQuantityFromCart = (productID, tangGiam) => {
+    var gioHangCapNhat = [...carts];
+    let index = gioHangCapNhat.findIndex((sp) => sp.id === productID);
+
+    if (tangGiam) {
+      gioHangCapNhat[index].quantity += 1;
+    } else {
+      if (gioHangCapNhat[index].quantity > 1) {
+        gioHangCapNhat[index].quantity -= 1;
+      }
+    }
+    setCarts(gioHangCapNhat);
   };
 
   return (
@@ -79,6 +89,7 @@ export default function Shopping() {
       {/* hoặc */}
       {isOpen && (
         <Cart
+          onHandleChangeQuantityFromCart={handleChangeQuantityFromCart}
           carts={carts}
           onCloseCart={handleCloseCart}
           onDeleteProductFromCart={handleDeleteProductFromCart}

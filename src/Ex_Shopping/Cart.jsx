@@ -1,11 +1,19 @@
 import React from "react";
 
-export default function Cart({ onCloseCart, carts, onDeleteProductFromCart }) {
+export default function Cart({
+  onCloseCart,
+  carts,
+  onDeleteProductFromCart,
+  onHandleChangeQuantityFromCart,
+}) {
+  let total = carts.reduce((tongTien, spGioHang, index) => {
+    return (tongTien += spGioHang.quantity * spGioHang.price);
+  }, 0);
   return (
     <>
       <div style={{ display: "block" }} className="modal show" tabIndex={-1}>
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className="modal-content" style={{ width: "800px" }}>
             <div className="modal-header">
               <h5 className="modal-title">Giỏ Hàng</h5>
               <button
@@ -43,9 +51,25 @@ export default function Cart({ onCloseCart, carts, onDeleteProductFromCart }) {
                             height="70px"
                           />
                         </td>
-                        <td>{item.quantity}</td>
-                        <td>{item.price}</td>
-                        <td>{item.price * item.quantity}</td>
+                        <td>
+                          <button
+                            onClick={() => {
+                              onHandleChangeQuantityFromCart(item.id, true);
+                            }}
+                          >
+                            +
+                          </button>
+                          {item.quantity}
+                          <button
+                            onClick={() => {
+                              onHandleChangeQuantityFromCart(item.id, false);
+                            }}
+                          >
+                            -
+                          </button>
+                        </td>
+                        <td>{item.price.toLocaleString()}</td>
+                        <td>{(item.price * item.quantity).toLocaleString()}</td>
                         <td>
                           <button
                             onClick={() => onDeleteProductFromCart(item.id)}
@@ -58,6 +82,7 @@ export default function Cart({ onCloseCart, carts, onDeleteProductFromCart }) {
                     );
                   })}
                 </tbody>
+                <td>TỔNG TIỀN : {total.toLocaleString()} vnđ</td>
               </table>
             </div>
             <div className="modal-footer">
