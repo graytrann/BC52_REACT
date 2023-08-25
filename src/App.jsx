@@ -8,10 +8,16 @@
 // import Shop from "./Ex_ShopLayout/Shop";
 // import ShoeShop from "./Ex_ShoeShop/ShoeShop";
 
-import Form from "./8_Form/Form";
-import Effect from "./9_Effect/Effect";
-import UserManagerment from "./Ex_UserManagement/UserManagerment";
-import Shopping from "./Ex_Shopping/Shopping";
+import BusTicket from "./Ex_BusTicket/BusTicket";
+
+// import CustomHooks from "./11_CustomHooks/CustomHooks";
+// import Redux from "./12_Redux/Redux";
+
+// import Form from "./8_Form/Form";
+// import Effect from "./9_Effect/Effect";
+// import UserManagerment from "./Ex_UserManagement/UserManagerment";
+// import Shopping from "./Ex_Shopping/Shopping";
+// import Ref from "./10_Ref/Ref";
 
 // import State from "./7_State/State";
 // import StateCar from "./Ex_StateCar/StateCar";
@@ -36,14 +42,18 @@ function App() {
       {/* <State /> */}
       {/* <Form/> */}
       {/* <Effect /> */}
+      {/* <Ref /> */}
+      {/* <CustomHooks /> */}
+      {/* <Redux /> */}
 
       {/* BÀI TẬP */}
       {/* <Shop /> */}
       {/* <ShoeShop /> */}
       {/* BÀI TẬP HOME */}
       {/* <StateCar /> */}
-      <Shopping />
+      {/* <Shopping /> */}
       {/* <UserManagerment/> */}
+      <BusTicket />
     </div>
   );
 }
