@@ -1,53 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./redux/reducer/counterReducer";
+import todosReducer from "./redux/reducer/todoReducer";
+import busTicketReducer from "./redux/reducer/busTicketReducer";
 // hàm tạo ra store của redux để mà cấu hình ra Reducer
 // mỗi Reducer làm 1 chức năng khác nhau
-
 // phải gán giá trị lúc đầu cho nó vì lần đầu state đưa vào Reducer không có giá trị
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case "increase": {
-      return state + 1;
-    }
-    case "decrease": {
-      return state - 1;
-    }
-    case "increaseByAmount": {
-      return state + action.payload;
-    }
 
-    default:
-      return state;
-  }
-};
-
-// TODO
-const todosReducer = (state = [], action) => {
-  switch (action.type) {
-    case "addTodo": {
-      return [...state, action.payload];
-    }
-    case "deleteTodo": {
-      const todoId = action.payload;
-      return state.filter((item) => item.id !== todoId);
-    }
-    case "completeTodo": {
-      const todoId = action.payload;
-      return state.map((item) => {
-        if (item.id === todoId) {
-          return { ...item, isCompleted: !item.isCompleted };
-        }
-        return item;
-      });
-    }
-    default:
-      return state;
-  }
-};
-
+//STORE LƯU TRỮ REDUCER
 const store = configureStore({
   reducer: {
     counter: counterReducer,
     todos: todosReducer,
+    busTicket: busTicketReducer,
   },
 });
 
