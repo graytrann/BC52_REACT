@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { selectSeat } from "../redux/actions/busTicketActions";
+// import { selectSeat } from "../redux/actions/busTicketActions";
+import { selectSeat } from "../redux/slices/busTicketSlice";
 // import { useEffect } from "react";
 
 export default function SeatItem({ seat, isSelected }) {
@@ -27,7 +28,7 @@ export default function SeatItem({ seat, isSelected }) {
     //   type: "selectSeat",
     //   payload: { ...seat, isSelected: !isSelected }, // để !isSelected vì setState là hàm BĐB nên cần thời gian để chạy
     // });
-     dispatch(selectSeat({ ...seat, isSelected: !isSelected }));
+    dispatch(selectSeat({ ...seat, isSelected: !isSelected }));
   };
 
   // HandleSelect đổi trạng thái (Cách 2)

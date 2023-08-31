@@ -15,7 +15,7 @@ export default function Form() {
   };
 
   const handleChange = (event) => {
-    // if(event.target.name === "username"){
+    // if(event.target.name === "∏rname"){
     // setValues({ ...values, username: event.target.value });
     // }
     // Cần đặt thuộc tính name của input nó khớp với tên thuộc tính trong object value

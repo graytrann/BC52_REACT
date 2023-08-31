@@ -8,7 +8,9 @@
 // import Shop from "./Ex_ShopLayout/Shop";
 // import ShoeShop from "./Ex_ShoeShop/ShoeShop";
 
-import BusTicket from "./Ex_BusTicket/BusTicket";
+import ReduxThunk from "./13_ReduxThunk/ReduxThunk";
+
+// import BusTicket from "./Ex_BusTicket/BusTicket";
 
 // import CustomHooks from "./11_CustomHooks/CustomHooks";
 // import Redux from "./12_Redux/Redux";
@@ -45,6 +47,7 @@ function App() {
       {/* <Ref /> */}
       {/* <CustomHooks /> */}
       {/* <Redux /> */}
+      <ReduxThunk />
 
       {/* BÀI TẬP */}
       {/* <Shop /> */}
@@ -53,7 +56,7 @@ function App() {
       {/* <StateCar /> */}
       {/* <Shopping /> */}
       {/* <UserManagerment/> */}
-      <BusTicket />
+      {/* <BusTicket /> */}
     </div>
   );
 }

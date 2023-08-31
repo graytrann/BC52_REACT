@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./redux/reducer/counterReducer";
 import todosReducer from "./redux/reducer/todoReducer";
-import busTicketReducer from "./redux/reducer/busTicketReducer";
+// import busTicketReducer from "./redux/reducer/busTicketReducer";
+import busTicketReducer from "./redux/slices/busTicketSlice";
+// import postReducer from "./redux/reducer/postReducer";
+import postReducer from "./redux/slices/postSlice";
 // hàm tạo ra store của redux để mà cấu hình ra Reducer
 // mỗi Reducer làm 1 chức năng khác nhau
 // phải gán giá trị lúc đầu cho nó vì lần đầu state đưa vào Reducer không có giá trị
@@ -12,6 +15,7 @@ const store = configureStore({
     counter: counterReducer,
     todos: todosReducer,
     busTicket: busTicketReducer,
+    post: postReducer,
   },
 });
 

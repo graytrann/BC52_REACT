@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeSeat } from "../redux/actions/busTicketActions";
+// import { removeSeat } from "../redux/actions/busTicketActions";
+import { removeSeat } from "../redux/slices/busTicketSlice";
 
 export default function Tickets() {
   // nhận tham số từ Store Redux
